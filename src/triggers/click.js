@@ -2,6 +2,13 @@ import {fireRouterEvent} from '../utils.js';
 
 /* istanbul ignore next: coverage is calculated in Chrome, this code is for IE */
 function getAnchorOrigin(anchor) {
+  //IE11: Sometimes doesn't provide any port,protocol,hostname or host
+  //It also converts relative href to absolute
+  //In that case use href to fetch origin info
+  if (anchor.port == "" && anchor.protocol == "" && anchor.hostname == "" && anchor.host == "" && anchor.href.indexOf("http") == 0) {
+      let pathArray = anchor.href.split('/');
+      return pathArray[0] + '//' + pathArray[2];
+  }
   // IE11: on HTTP and HTTPS the default port is not included into
   // window.location.origin, so won't include it here either.
   const port = anchor.port;
