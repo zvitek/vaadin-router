@@ -7,7 +7,7 @@
  * LICENSE.txt file in the root directory of this source tree.
  */
 
-const { pathToRegexp } = require("path-to-regexp");
+import pathToRegexp from './path-to-regexp.js';
 import matchRoute from './matchRoute.js';
 import resolveRoute from './resolveRoute.js';
 import {toArray, ensureRoutes, isString, getNotFoundError, notFoundResult} from '../utils.js';

@@ -1,1 +1,2 @@
-export {default} from 'path-to-regexp';
+const pathToRegexp = require('path-to-regexp')
+export default pathToRegexp;
