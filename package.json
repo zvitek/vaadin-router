@@ -1,5 +1,5 @@
 {
-  "name": "@vaadin/router",
+  "name": "zvitek/vaadin-router",
   "version": "1.3.0",
   "description": "Small and powerful client-side router for Web Components. Framework-agnostic.",
   "main": "dist/vaadin-router.js",
